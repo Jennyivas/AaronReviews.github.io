@@ -2,7 +2,7 @@ body {
     background-color: white;
 }
 img.banner {
-    background-image: linear-gradient(to bottom left, rgba(10, 100, 10, 0.3), rgba(54, 92, 84, 0.5)), url("data/Crowd_blue.jpg");
+    background-image: linear-gradient(to bottom left, rgba(10, 100, 10, 0.3), rgba(54, 92, 84, 0.5)), url("/data/crowd_blue.jpg");
     position: absolute;
     top: 7vh;
     left: 0;
