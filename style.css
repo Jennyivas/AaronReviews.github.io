@@ -1,21 +1,6 @@
 body {
     background-color: white;
 }
-img.banner {
-    background-image: linear-gradient(to bottom left, rgba(10, 100, 10, 0.3), rgba(54, 92, 84, 0.5)), url("/data/crowd_blue.jpg");
-    position: absolute;
-    top: 7vh;
-    left: 0;
-    Right: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 40%;
-    padding: 0px;
-    margin: 0px;
-    border: 0px;
-    z-index:10;
-}
 table.navbar {
 padding: 0px;
 height: 100%;
@@ -60,11 +45,6 @@ left: 0;
 Right: 0;
 height: 7vh;
 z-index: 20;
-}
-.spacer
-{
-width: 100%;
-height: 48vh;
 }
 .spacer2
 {
@@ -179,7 +159,7 @@ transition: background-color, color 0.4s, 0.2s;
 }
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .collapsible:hover {
-  background-color: rgb(54, 92, 84);
+  background-color: rgb(178, 34,34);
   color: white;
 }
 .active:after {
