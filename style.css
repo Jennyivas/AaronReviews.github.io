@@ -159,7 +159,7 @@ transition: background-color, color 0.4s, 0.2s;
 }
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .collapsible:hover {
-  background-color: rgb(65, 14, 14);
+  background-color: rgba(75, 24, 24, 0.95);
   color: white;
 }
 .active:after {
