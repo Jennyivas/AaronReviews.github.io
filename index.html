@@ -59,8 +59,10 @@
 
     <div class="Mcontainer" align="center">
         <p class="text"></p>
+        <p class="text"></p>
         <script>
-            $(".text").html('Hello');
+            $(".text").first().html('Hello');
+            $(".text").last().html(String(content));
         </script>
     </div>
 
