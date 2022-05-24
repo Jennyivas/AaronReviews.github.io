@@ -62,12 +62,14 @@
         <script>
             var content;
             var colours;
+            $(".text").first().html('Hello');
             $.getJSON('PageInfo.json', function(Json) {
                 content = Json.content.Home;
                 colours = Json.colour;
+                $.each(content, function (index, value) {
+                    $('.text').last()append('<p>'+value+'</p>');
+                    console.log(value);
             });   
-            $(".text").first().html('Hello');
-            $(".text").last().html(content);
         </script>
     </div>
 
