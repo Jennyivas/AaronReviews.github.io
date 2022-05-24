@@ -67,7 +67,7 @@
                 content = Json.content.Home;
                 colours = Json.colour;
                 $.each(content, function (index, value) {
-                    $('.text').last().append('<p>'+value+'</p>');
+                    $('.text').last().append(value);
                     console.log(value);
             });   
         </script>
