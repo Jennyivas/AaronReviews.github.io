@@ -18,7 +18,7 @@
 // catch(err) { pull = false; }
 
 $(document).ready(function() {
-    $.getJSON('../lib/PageInfo.json', function(Json) {
+    $.getJSON('PageInfo.json', function(Json) {
         var content = Json.content;
         var colours = Json.colour;
     });              
