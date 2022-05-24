@@ -21,5 +21,6 @@ $(document).ready(function() {
     $.getJSON('PageInfo.json', function(Json) {
         var content = Json.content;
         var colours = Json.colour;
+        $('#testing').text(String(content));
     });              
  });
