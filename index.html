@@ -59,14 +59,22 @@
     <div class="Mcontainer" align="center">
         <p class="text"></p>
         <p class="text"></p>
+        <p class="text"></p>
         <script>
             var content;
             var colours;
-            $(".text").first().html('Hello');
             $.getJSON('PageInfo.json', function(Json) {
-                content = Json.content.Home;
+                content = Json.content;
                 colours = Json.colour;
-                $.each(content, function (index, value) {
+                $.each(content.Home, function (index, value) {
+                    $('.text').first().append(value);
+                    console.log(value);
+                });
+                $.each(content.About, function (index, value) {
+                    $('.text').eq(1).append(value);
+                    console.log(value);
+                });
+                $.each(content.Exams, function (index, value) {
                     $('.text').last().append(value);
                     console.log(value);
                 });
