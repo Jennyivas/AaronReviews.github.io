@@ -63,11 +63,11 @@
             var content;
             var colours;
             $.getJSON('PageInfo.json', function(Json) {
-                content = Json.content;
+                content = Json.content.Home;
                 colours = Json.colour;
             });   
             $(".text").first().html('Hello');
-            $(".text").last().html(String(content));
+            $(".text").last().html(content);
         </script>
     </div>
 
