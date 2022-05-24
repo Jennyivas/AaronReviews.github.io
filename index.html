@@ -61,6 +61,10 @@
         <p class="text"></p>
         <p class="text"></p>
         <script>
+            $.getJSON('PageInfo.json', function(Json) {
+                var content = Json.content;
+                var colours = Json.colour;
+            });   
             $(".text").first().html('Hello');
             $(".text").last().html(String(content));
         </script>
