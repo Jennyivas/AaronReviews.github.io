@@ -78,13 +78,11 @@
                 create_content(value);
             });
             
-            console.log($('.Mcontainer').length);
-            console.log(review.length);
-            
-//             while (counter <= $('.Mcontainer').length - 1 && counter <= review.length - 1) {
-//                     create_review(review[counter], counter);
-//                     counter += 1;
-//             }
+            while (counter <= $('.Mcontainer').length - 1 && counter <= review.length - 1) {
+                console.log(review[counter]);
+                create_review(review[counter], counter);
+                counter += 1;
+            }
         });
     </script>
 </body>
