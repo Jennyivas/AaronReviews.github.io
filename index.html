@@ -60,7 +60,7 @@
         function create_content(content) {
             $(document.body).append("<div class='Mcontainer' align='center'></div>")
             $.each(content, function (index, value) {
-                $('Mcontainer").last().append("<p class='text'></p>")
+                $('Mcontainer').last().append("<p class='text'></p>")
                 $('.text').last().append(value);
             });
         }
