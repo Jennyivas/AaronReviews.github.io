@@ -71,7 +71,7 @@
                 create_content(value);
             });
             
-            $.each('.Mcontainer', function() {
+            $.each($('.Mcontainer').get(), function() {
                 contentbox = $(this).get(counter);
                 $("<div id='boxM'></div><br />").insertBefore(contentbox);
                 $('.boxM').last().append("<blockquote class='review' id='review'></blockquote><span class='reviewer' id='reviewer'></span>");
