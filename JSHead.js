@@ -6,7 +6,7 @@
     });
 }
 
-$.getJSON('../lib/PageInfo.json', function(Json) {
+$.getJSON('PageInfo.json', function(Json) {
     var colours = Json.colour['default'];           
     $(':root').css({
         '--color0': colours[0],
