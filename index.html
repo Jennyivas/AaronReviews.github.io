@@ -69,7 +69,9 @@
         $.getJSON('PageInfo.json', function(Json) {
             content = Json.content;
             colours = Json.colour;
-            $.each(content, create_content(content));
+            $.each(content, function(index, value) {
+                create_content(value);
+            });
         });   
     </script>
 </body>
