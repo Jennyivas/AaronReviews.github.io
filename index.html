@@ -60,6 +60,7 @@
         function create_content(content) {
             $(document.body).append("<div class='Mcontainer' align='center'></div>")
             $.each(content, function (index, value) {
+                console.log(value);
                 $('Mcontainer').last().append("<p class='text'></p>")
                 $('.text').last().append(value);
             });
@@ -70,6 +71,7 @@
             content = Json.content;
             colours = Json.colour;
             $.each(content, function(index, value) {
+                console.log(value);
                 create_content(value);
             });
         });   
