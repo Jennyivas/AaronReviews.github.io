@@ -23,11 +23,11 @@
         
         $.getJSON('PageInfo.json', function(Json) {
             content = Json.content;
-            colours = Json.colour.default;
+            colours = Json.colour['default'];
             reviews = Json.reviews;
         });
         
-        console.log(colours);
+        console.log(colours)
         
         if (screen.width <= screen.height) { width = screen.width / 8 + 'px'; } 
         else { width = screen.height / 8 + 'px'; }
