@@ -19,8 +19,8 @@ $.getJSON('PageInfo.json', function(Json) {
         '--color7': colours[7],
         '--T': 1 + 'em',
         '--M': function() {
-            if (screen.width <= screen.height) { width = screen.width / 8 + 'px'; } 
-            else { width = screen.height / 8 + 'px'; }
+            if (screen.width <= screen.height) { width = screen.width / 9 + 'px'; } 
+            else { width = screen.height / 9 + 'px'; }
             return width;
         }
     });
