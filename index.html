@@ -11,15 +11,7 @@
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
     <script>
-        var width, colours, content, reviews;
-        colours, content, reviews = $.getJSON('PageInfo.json', colours, content, reviews = function(Json) {
-            var colours = Json.colour;
-            var content = Json.content;
-            var reviews = Json.reviews;
-            return colours, content, reviews;
-        });
-        
-        console.log(reviews);
+        var width, content, colours, reviews;
 
         function create_content(content) {
             $("<div class='Mcontainer' align='center'></div>").insertBefore("#placeholder");
@@ -28,24 +20,32 @@
                 $('.text').last().append(value);
             });
         }
+        
+        function assign_variable(value1, value2, value3) {
+            colours = value1;
+            content = value2;
+            reviews = value3;
+        }
 
-
-            
         if (screen.width <= screen.height) { width = screen.width / 8 + 'px'; } 
         else { width = screen.height / 8 + 'px'; }
         
-        $(document).ready(function() {
-            // document.documentElement.style.setProperty('--color0', colours[0]);
-            // document.documentElement.style.setProperty('--color1', colours[1]);
-            // document.documentElement.style.setProperty('--color2', colours[2]);
-            // document.documentElement.style.setProperty('--color3', colours[3]);
-            // document.documentElement.style.setProperty('--color4', colours[4]);
-            // document.documentElement.style.setProperty('--color5', colours[5]);
-            // document.documentElement.style.setProperty('--color6', colours[6]);
-            // document.documentElement.style.setProperty('--color7', colours[7]);
-            // document.documentElement.style.setProperty('--M', width);
-            // document.documentElement.style.setProperty('--T', 1.1 + 'em');
+        $.getJSON('PageInfo.json', function(Json) {
+            assign_variable(Json.colour, Json.content, Json.reviews);
         });
+        
+        console.log(reviews);
+        
+        // document.documentElement.style.setProperty('--color0', colours[0]);
+        // document.documentElement.style.setProperty('--color1', colours[1]);
+        // document.documentElement.style.setProperty('--color2', colours[2]);
+        // document.documentElement.style.setProperty('--color3', colours[3]);
+        // document.documentElement.style.setProperty('--color4', colours[4]);
+        // document.documentElement.style.setProperty('--color5', colours[5]);
+        // document.documentElement.style.setProperty('--color6', colours[6]);
+        // document.documentElement.style.setProperty('--color7', colours[7]);
+        // document.documentElement.style.setProperty('--M', width);
+        // document.documentElement.style.setProperty('--T', 1.1 + 'em');
     </script>
 </head>
 <body>
