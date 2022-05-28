@@ -20,7 +20,7 @@
         }
         
         $.getJSON('PageInfo.json', function(Json) {
-            var colours = Json.colour.default;
+            var colours = Json.colour['default'];
             var width;
 
             if (screen.width <= screen.height) { width = screen.width / 8 + 'px'; } 
