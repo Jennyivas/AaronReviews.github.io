@@ -14,6 +14,8 @@
         var width, content, colours, reviews;
         var info = $.getJSON('PageInfo.json');
         
+        console.log(info);
+        
         function create_content(content) {
             $("<div class='Mcontainer' align='center'></div>").insertBefore("#placeholder");
             $.each(content, function (index, value) {
