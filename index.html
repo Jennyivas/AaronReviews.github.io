@@ -12,7 +12,8 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
     <script>
         var width, content, colours, reviews;
-
+        var info = $.getJSON('PageInfo.json');
+        
         function create_content(content) {
             $("<div class='Mcontainer' align='center'></div>").insertBefore("#placeholder");
             $.each(content, function (index, value) {
@@ -20,27 +21,28 @@
                 $('.text').last().append(value);
             });
         }
-        
-        $.getJSON('PageInfo.json', function(Json) {
-            content = Json.content;
-            colours = Json.colour.default;
-            reviews = Json.reviews;
-            console.log(colours)
-        });
-        
+
+        content = info.content;
+        colours = info.colour.default;
+        reviews = info.reviews;
+
+        console.log(colours);
+            
         if (screen.width <= screen.height) { width = screen.width / 8 + 'px'; } 
         else { width = screen.height / 8 + 'px'; }
         
-        document.documentElement.style.setProperty('--color0', colours[0]);
-        document.documentElement.style.setProperty('--color1', colours[1]);
-        document.documentElement.style.setProperty('--color2', colours[2]);
-        document.documentElement.style.setProperty('--color3', colours[3]);
-        document.documentElement.style.setProperty('--color4', colours[4]);
-        document.documentElement.style.setProperty('--color5', colours[5]);
-        document.documentElement.style.setProperty('--color6', colours[6]);
-        document.documentElement.style.setProperty('--color7', colours[7]);
-        document.documentElement.style.setProperty('--M', width);
-        document.documentElement.style.setProperty('--T', 1.1 + 'em');
+        $(document).ready(function() {
+            document.documentElement.style.setProperty('--color0', colours[0]);
+            document.documentElement.style.setProperty('--color1', colours[1]);
+            document.documentElement.style.setProperty('--color2', colours[2]);
+            document.documentElement.style.setProperty('--color3', colours[3]);
+            document.documentElement.style.setProperty('--color4', colours[4]);
+            document.documentElement.style.setProperty('--color5', colours[5]);
+            document.documentElement.style.setProperty('--color6', colours[6]);
+            document.documentElement.style.setProperty('--color7', colours[7]);
+            document.documentElement.style.setProperty('--M', width);
+            document.documentElement.style.setProperty('--T', 1.1 + 'em');
+        });
     </script>
 </head>
 <body>
