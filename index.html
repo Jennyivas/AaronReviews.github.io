@@ -20,12 +20,7 @@
         }
         
         $.getJSON('PageInfo.json', function(Json) {
-            var colours = Json.colour['default'];
-            var width;
-
-            if (screen.width <= screen.height) { width = screen.width / 8 + 'px'; } 
-            else { width = screen.height / 8 + 'px'; }
-            
+            var colours = Json.colour['default'];           
             $(':root').css({
                 '--color0': colours[7],
                 '--color1': colours[6],
@@ -35,20 +30,14 @@
                 '--color5': colours[2],
                 '--color6': colours[1],
                 '--color7': colours[0],
-                '--M': width,
-                '--T': 1.1 + 'em'
+                '--T': 1.1 + 'em',
+                '--M': function() {
+                    if (screen.width <= screen.height) { width = screen.width / 8 + 'px'; } 
+                    else { width = screen.height / 8 + 'px'; }
+                    console.log(width)
+                    return width;
+                }
             })
-            
-//             document.documentElement.style.setProperty('--color0', colours[0]);
-//             document.documentElement.style.setProperty('--color1', colours[1]);
-//             document.documentElement.style.setProperty('--color2', colours[2]);
-//             document.documentElement.style.setProperty('--color3', colours[3]);
-//             document.documentElement.style.setProperty('--color4', colours[4]);
-//             document.documentElement.style.setProperty('--color5', colours[5]);
-//             document.documentElement.style.setProperty('--color6', colours[6]);
-//             document.documentElement.style.setProperty('--color7', colours[7]);
-//             document.documentElement.style.setProperty('--M', width);
-//             document.documentElement.style.setProperty('--T', 1.1 + 'em');
         });
     </script>
 </head>
