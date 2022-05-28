@@ -17,7 +17,7 @@ $.getJSON('PageInfo.json', function(Json) {
         '--color5': colours[5],
         '--color6': colours[6],
         '--color7': colours[7],
-        '--T': 0.9 + 'em',
+        '--T': 1 + 'em',
         '--M': function() {
             if (screen.width <= screen.height) { width = screen.width / 8 + 'px'; } 
             else { width = screen.height / 8 + 'px'; }
