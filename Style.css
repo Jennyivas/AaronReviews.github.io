@@ -1,6 +1,4 @@
 ﻿:root {
-    --M: 38px;
-    --T: 1.5em;
     --color0: rgb(238,50,38);
     --color1: rgb(180,85,85);
     --color2: rgb(255,89,0);
@@ -9,6 +7,8 @@
     --color5: rgb(255,209,0);
     --color6: rgb(255,242,0);
     --color7: rgb(90,30,30);
+    --M: 38px;
+    --T: 1.5em;
     --font-family-titles: "cambria", "calibri", "baskerville", serif;
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -169,10 +169,6 @@ img.Msc, img.Mabrsm, img.Mcircle1, img.Mcircle2, img.Mcircle3, img.Mcircle4, img
     transition: 0.2s ease-out;
     }
 
-img.mcircle5 {
-    border: 2px solid rgb(149,149,149);
-}
-
 #box3, #box1 { /*use # when you know there will only be one instance of a class in the page - use . when you know there will be multiple instances of an element in the page*/
     height: 28VH;
     position: relative;
@@ -189,7 +185,7 @@ img.mcircle5 {
     margin-top: -28VH;
     margin-left: 50%;
 }
-#boxM {
+.boxM {
     height: 32VH;
     position: relative;
     border: solid 10px rgba(0,0,255,0);
