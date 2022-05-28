@@ -62,11 +62,11 @@
     <div id="placeholder"></div>
     
     <script>
-        function create_review(array, n) {
+        function create_review(item, n) {
             $("<div id='boxM'></div><br />").insertBefore(".Mcontainer").eq(n);
             $('.boxM').last().append("<blockquote class='review' id='review'></blockquote><span class='reviewer' id='reviewer'></span>");
-            $('.review').last().append(array[n]['comment']);
-            $('.reviewer').last().append(array[n]['author']);
+            $('.review').last().append(item['comment']);
+            $('.reviewer').last().append(item['author']);
         }
         
         $.getJSON('PageInfo.json', function(Json) {
@@ -78,10 +78,13 @@
                 create_content(value);
             });
             
-            while (counter <= $('.Mcontainer').length - 1 && counter <= review.length - 1) {
-                    create_review(review, counter);
-                    counter += 1;
-            }
+            console.log($('.Mcontainer').length);
+            console.log(review.length);
+            
+//             while (counter <= $('.Mcontainer').length - 1 && counter <= review.length - 1) {
+//                     create_review(review[counter], counter);
+//                     counter += 1;
+//             }
         });
     </script>
 </body>
