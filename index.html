@@ -72,7 +72,7 @@
             
             $.each($('.Mcontainer').get(), function(n) {
                 console.log($(this));
-                console.log($(this).index();
+                console.log($(this).index());
                 $("<div id='boxM'></div><br />").insertBefore($(this));
                 $('.boxM').last().append("<blockquote class='review' id='review'></blockquote><span class='reviewer' id='reviewer'></span>");
                 $('.review').last().append(review[$(this).index()]['comment']);
