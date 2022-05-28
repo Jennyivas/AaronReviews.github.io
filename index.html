@@ -12,7 +12,7 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
     <script>
         function create_content(content) {
-            $("<div class='Mcontainer' align='center'></div>").insertBefore("#placeholder");
+            $("<div class='Mcontainer' align='center'></div><br />").insertBefore("#placeholder");
             $.each(content, function (index, value) {
                 $('.Mcontainer').last().append("<p class='text'></p>")
                 $('.text').last().append(value);
@@ -58,24 +58,31 @@
             <img class="Mabrsm" src="icons/ABRSM.png" style="background-color: var(--color0);" />
         </a>
     </header>
-
-    <div id="boxM">
-        <blockquote class="review" id="review"></blockquote>
-        <span class="reviewer" id="reviewer" align="center"></span>
-    </div>
-    <br />
     
     <div id="placeholder"></div>
     
     <script>
+        function create_review(array, n) {
+            $("<div id='boxM'></div><br />").insertBefore(".Mcontainer").eq(n);
+            $('.boxM').last().append("<blockquote class='review' id='review'></blockquote><span class='reviewer' id='reviewer'></span>");
+            $('.review').last().append(array[n]['comment']);
+            $('.reviewer').last().append(array[n]['author']);
+        }
+        
         $.getJSON('PageInfo.json', function(Json) {
             content = Json.content;
             review = Json.reviews;
-            $('#review').append(review[3]['comment']);
-            $('#reviewer').append(review[3]['author']);
+            counter = 0;
+            
             $.each(content, function(index, value) {
                 create_content(value);
             }); 
+            
+            while (counter <= $('.Mcontainer').length - 1 && counter <= review.length - 1) {
+                    create_review(review, counter);
+                    counter += 1;
+                }
+            });
         });
     </script>
 </body>
