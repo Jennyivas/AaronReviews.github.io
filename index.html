@@ -71,10 +71,11 @@
                 create_content(value);
             });
             
-            $.each($('.Mcontainer').get(), function(n) {
+            $.each($('.Mcontainer').get(), function() {
                 $("<div id='boxM'></div><br />").insertBefore($(this));
-                $('.boxM').last().append("<blockquote class='review' id='review'></blockquote><span class='reviewer' id='reviewer'></span>");
+                $('.boxM').last().append("<blockquote class='review'></blockquote>");
                 $('.review').last().append(review[counter]['comment']);
+                $('.boxM').last().append("<span class='reviewer'></span>");
                 $('.reviewer').last().append(review[counter]['author']);
                 counter += 1;
             });
