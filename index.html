@@ -11,20 +11,33 @@
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
     <script>
-        var width;
-        if (screen.width <= screen.height) {
-            width = screen.width / 8 + 'px';
-        } else { 
-            width = screen.height / 8 + 'px'; 
+        var width, content, colours, reviews;
+
+        function create_content(content) {
+            $("<div class='Mcontainer' align='center'></div>").insertBefore("#placeholder");
+            $.each(content, function (index, value) {
+                $('.Mcontainer').last().append("<p class='text'></p>")
+                $('.text').last().append(value);
+            });
         }
-        document.documentElement.style.setProperty('--color0', 'rgb(238,50,38)');
-        document.documentElement.style.setProperty('--color1', 'rgb(180,85,85)');
-        document.documentElement.style.setProperty('--color2', 'rgb(255,89,0)');
-        document.documentElement.style.setProperty('--color3', 'rgb(255,160,50)');
-        document.documentElement.style.setProperty('--color4', 'rgb(255,190,35)');
-        document.documentElement.style.setProperty('--color5', 'rgb(255,209,0)');
-        document.documentElement.style.setProperty('--color6', 'rgb(255,242,0)');
-        document.documentElement.style.setProperty('--color7', 'rgb(90,30,30)');
+        
+        $.getJSON('PageInfo.json', function(Json) {
+            content = Json.content;
+            colours = Json.colour;
+            reviews = Json.reviews;
+        });
+        
+        if (screen.width <= screen.height) { width = screen.width / 8 + 'px'; } 
+        else { width = screen.height / 8 + 'px'; }
+        
+        document.documentElement.style.setProperty('--color0', colours.default[0]);
+        document.documentElement.style.setProperty('--color1', colours.default[1]);
+        document.documentElement.style.setProperty('--color2', colours.default[2]);
+        document.documentElement.style.setProperty('--color3', colours.default[3]);
+        document.documentElement.style.setProperty('--color4', colours.default[4]);
+        document.documentElement.style.setProperty('--color5', colours.default[5]);
+        document.documentElement.style.setProperty('--color6', colours.default[6]);
+        document.documentElement.style.setProperty('--color7', colours.default[7]);
         document.documentElement.style.setProperty('--M', width);
         document.documentElement.style.setProperty('--T', 1.1 + 'em');
     </script>
@@ -57,22 +70,9 @@
     <br />
     <div id="placeholder"></div>
     <script>
-        function create_content(content) {
-            $("<div class='Mcontainer' align='center'></div>").insertBefore("#placeholder");
-            $.each(content, function (index, value) {
-                $('.Mcontainer').last().append("<p class='text'></p>")
-                $('.text').last().append(value);
-            });
-        }
-        var content;
-        var colours;
-        $.getJSON('PageInfo.json', function(Json) {
-            content = Json.content;
-            colours = Json.colour;
-            $.each(content, function(index, value) {
-                create_content(value);
-            });
-        });   
+        $.each(content, function(index, value) {
+            create_content(value);
+        }); 
     </script>
 </body>
 </html>
