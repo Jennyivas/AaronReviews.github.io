@@ -22,14 +22,14 @@
         $.getJSON('PageInfo.json', function(Json) {
             var colours = Json.colour['default'];           
             $(':root').css({
-                '--color0': colours[7],
-                '--color1': colours[6],
-                '--color2': colours[5],
-                '--color3': colours[4],
-                '--color4': colours[3],
-                '--color5': colours[2],
-                '--color6': colours[1],
-                '--color7': colours[0],
+                '--color0': colours[0],
+                '--color1': colours[1],
+                '--color2': colours[2],
+                '--color3': colours[3],
+                '--color4': colours[4],
+                '--color5': colours[5],
+                '--color6': colours[6],
+                '--color7': colours[7],
                 '--T': 1.1 + 'em',
                 '--M': function() {
                     if (screen.width <= screen.height) { width = screen.width / 8 + 'px'; } 
@@ -65,19 +65,16 @@
         $.getJSON('PageInfo.json', function(Json) {
             content = Json.content;
             review = Json.reviews;
-            counter = 0;
             
             $.each(content, function(index, value) {
                 create_content(value);
             });
             
-            $.each($('.Mcontainer').get(), function() {
-                contentbox = $(this).get(counter);
-                $("<div id='boxM'></div><br />").insertBefore(contentbox);
+            $.each($('.Mcontainer').get(), function(n) {
+                $("<div id='boxM'></div><br />").insertBefore($(this));
                 $('.boxM').last().append("<blockquote class='review' id='review'></blockquote><span class='reviewer' id='reviewer'></span>");
-                $('.review').last().append(review[counter]['comment']);
-                $('.reviewer').last().append(review[counter]['author']);
-                counter += 1;
+                $('.review').last().append(review[$(this).index()]['comment']);
+                $('.reviewer').last().append(review[$(this).index()]['author']);
             });
             
 //             while (counter <= $('.Mcontainer').length - 1 && counter <= review.length - 1) {
