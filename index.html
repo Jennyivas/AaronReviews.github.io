@@ -71,13 +71,22 @@
                 create_content(value);
             });
             
-            while (counter <= $('.Mcontainer').length - 1 && counter <= review.length - 1) {
-                $("<div id='boxM'></div><br />").insertBefore(".Mcontainer").get(counter);
+            $.each('.Mcontainer', function() {
+                contentbox = $(this).get(counter);
+                $("<div id='boxM'></div><br />").insertBefore(contentbox);
                 $('.boxM').last().append("<blockquote class='review' id='review'></blockquote><span class='reviewer' id='reviewer'></span>");
                 $('.review').last().append(review[counter]['comment']);
                 $('.reviewer').last().append(review[counter]['author']);
                 counter += 1;
-            }
+            });
+            
+//             while (counter <= $('.Mcontainer').length - 1 && counter <= review.length - 1) {
+//                 $("<div id='boxM'></div><br />").insertBefore(".Mcontainer").get(counter);
+//                 $('.boxM').last().append("<blockquote class='review' id='review'></blockquote><span class='reviewer' id='reviewer'></span>");
+//                 $('.review').last().append(review[counter]['comment']);
+//                 $('.reviewer').last().append(review[counter]['author']);
+//                 counter += 1;
+//             }
         });
     </script>
 </body>
