@@ -56,31 +56,21 @@
     </div>
     <br />
 
-    <div class="Mcontainer" align="center">
-        <p class="text"></p>
-        <p class="text"></p>
-        <p class="text"></p>
-        <script>
-            var content;
-            var colours;
-            $.getJSON('PageInfo.json', function(Json) {
-                content = Json.content;
-                colours = Json.colour;
-                $.each(content.Home, function (index, value) {
-                    $('.text').first().append(value);
-                    console.log(value);
-                });
-                $.each(content.About, function (index, value) {
-                    $('.text').eq(1).append(value);
-                    console.log(value);
-                });
-                $.each(content.Exams, function (index, value) {
-                    $('.text').last().append(value);
-                    console.log(value);
-                });
-            });   
-        </script>
-    </div>
-
+    <script>
+        function create_content(content) {
+            $(document.body).append("<div class='Mcontainer' align='center'></div>")
+            $.each(content, function (index, value) {
+                $('Mcontainer").last().append("<p class='text'></p>")
+                $('.text').last().append(value);
+            });
+        }
+        var content;
+        var colours;
+        $.getJSON('PageInfo.json', function(Json) {
+            content = Json.content;
+            colours = Json.colour;
+            $.each(content, create_content(content));
+        });   
+    </script>
 </body>
 </html>
