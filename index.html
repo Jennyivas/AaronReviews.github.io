@@ -65,18 +65,18 @@
         $.getJSON('PageInfo.json', function(Json) {
             content = Json.content;
             review = Json.reviews;
+            counter = 0;
             
             $.each(content, function(index, value) {
                 create_content(value);
             });
             
             $.each($('.Mcontainer').get(), function(n) {
-                console.log($(this));
-                console.log($(this).index());
-                $("<div id='boxM'></div><br />").insertBefore($(this));
+                $("<div id='boxM'></div><br />").insertBefore($(this).index());
                 $('.boxM').last().append("<blockquote class='review' id='review'></blockquote><span class='reviewer' id='reviewer'></span>");
-                $('.review').last().append(review[$(this).index()]['comment']);
-                $('.reviewer').last().append(review[$(this).index()]['author']);
+                $('.review').last().append(review[counter]['comment']);
+                $('.reviewer').last().append(review[counter]['author']);
+                counter += 1;
             });
             
 //             while (counter <= $('.Mcontainer').length - 1 && counter <= review.length - 1) {
