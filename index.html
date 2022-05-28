@@ -9,48 +9,11 @@
     <meta name="keywords" content="Jenny, Ivas, Piano, teacher, tuition, ABRSM, nottingham, local, classical, student, exam, exams, Bakesfield, Gedling, Nottinghamshire, keyboard, lessons, teaching, syllabus, music, cheap, inexpensive, reasonable, friendly">
     <link rel="stylesheet" href="Style.css" />
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
-    <script>
-        function create_content(content) {
-            $("<div class='Mcontainer' align='center'></div><br />").insertBefore("#placeholder");
-            $.each(content, function (index, value) {
-                $('.Mcontainer').last().append("<p class='text'></p>")
-                $('.text').last().append(value);
-            });
-        }
-        
-        $.getJSON('PageInfo.json', function(Json) {
-            var colours = Json.colour['default'];           
-            $(':root').css({
-                '--color0': colours[0],
-                '--color1': colours[1],
-                '--color2': colours[2],
-                '--color3': colours[3],
-                '--color4': colours[4],
-                '--color5': colours[5],
-                '--color6': colours[6],
-                '--color7': colours[7],
-                '--T': 1.1 + 'em',
-                '--M': function() {
-                    if (screen.width <= screen.height) { width = screen.width / 8 + 'px'; } 
-                    else { width = screen.height / 8 + 'px'; }
-                    return width;
-                }
-            })
-        });
-    </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="JSHead.js"></script>
 </head>
 <body>
     <header class="mobile" align="center">
-        <a href="index.html">
-            <img class="Mcircle2" src="icons/Home.png" style="background-color: var(--color6);" />
-        </a>
-        <a href="Exams.html">
-            <img class="Mcircle3" src="icons/Education.png" style="background-color: var(--color5);" />
-        </a>
-        <a href="About.html">
-            <img class="Mcircle4" src="icons/Profile.png" style="background-color: var(--color4);" />
-        </a>
         <a href="http://soundcloud.com/user-650568300" target="_blank">
             <img class="Msc" src="icons/soundcloud.png" style="background-color: var(--color2);" />
         </a>
@@ -60,24 +23,6 @@
     </header>
     
     <div id="placeholder"></div>
-    
-    <script>
-        $.getJSON('PageInfo.json', function(Json) {
-            content = Json.content;
-            review = Json.reviews;
-            counter = 0;
-            
-            $.each(content, function(index, value) {
-                create_content(value);
-            });
-            
-            $.each($('.Mcontainer').get(), function() {
-                $("<div class='boxM'></div>").insertBefore($(this));
-                $('.boxM').last().append("<blockquote class='review' align='center'></blockquote>");
-                $('.review').last().append(review[counter]['comment']);
-                counter += 1;
-            });
-        });
-    </script>
+    <script type="text/javascript" src="JSBody.js"></script>
 </body>
 </html>
