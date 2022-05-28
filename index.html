@@ -62,13 +62,6 @@
     <div id="placeholder"></div>
     
     <script>
-        function create_review(item, n) {
-            $("<div id='boxM'></div><br />").insertBefore(".Mcontainer").eq(n);
-            $('.boxM').last().append("<blockquote class='review' id='review'></blockquote><span class='reviewer' id='reviewer'></span>");
-            $('.review').last().append(item['comment']);
-            $('.reviewer').last().append(item['author']);
-        }
-        
         $.getJSON('PageInfo.json', function(Json) {
             content = Json.content;
             review = Json.reviews;
@@ -79,8 +72,10 @@
             });
             
             while (counter <= $('.Mcontainer').length - 1 && counter <= review.length - 1) {
-                console.log(review[counter]);
-                create_review(review[counter], counter);
+                $("<div id='boxM'></div><br />").insertBefore(".Mcontainer").get(counter);
+                $('.boxM').last().append("<blockquote class='review' id='review'></blockquote><span class='reviewer' id='reviewer'></span>");
+                $('.review').last().append(review[counter]['comment']);
+                $('.reviewer').last().append(review[counter]['author']);
                 counter += 1;
             }
         });
