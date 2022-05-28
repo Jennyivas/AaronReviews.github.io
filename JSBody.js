@@ -1,4 +1,4 @@
-﻿$.getJSON('../lib/PageInfo.json', function(Json) {
+﻿$.getJSON('PageInfo.json', function(Json) {
     counter = 0;
     review = Json.reviews;
     content = Json.content;
