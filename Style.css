@@ -1,14 +1,4 @@
 ﻿:root {
-    --color0: rgb(238,50,38);
-    --color1: rgb(180,85,85);
-    --color2: rgb(255,89,0);
-    --color3: rgb(255,160,50);
-    --color4: rgb(255,190,35);
-    --color5: rgb(255,209,0);
-    --color6: rgb(255,242,0);
-    --color7: rgb(90,30,30);
-    --M: 38px;
-    --T: 1.5em;
     --font-family-titles: "cambria", "calibri", "baskerville", serif;
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
