@@ -34,7 +34,6 @@
                 '--M': function() {
                     if (screen.width <= screen.height) { width = screen.width / 8 + 'px'; } 
                     else { width = screen.height / 8 + 'px'; }
-                    console.log(width)
                     return width;
                 }
             })
@@ -61,15 +60,19 @@
     </header>
 
     <div id="boxM">
-        <blockquote class="review" id="review">Jenny has helped me learn music in way that I thought I couldn't. Jenny has made me feel welcome and has always been felixible with my lessons as I work shifts. Jenny is an excellent teacher and not to mention a great pianoist herself.</blockquote>
-        <span class="reviewer" id="reviewer" align="center">Charlene Mighten</span>
+        <blockquote class="review" id="review"></blockquote>
+        <span class="reviewer" id="reviewer" align="center"></span>
     </div>
     <br />
-
+    
     <div id="placeholder"></div>
+    
     <script>
         $.getJSON('PageInfo.json', function(Json) {
             content = Json.content;
+            review = Json.reviews;
+            $('#review').append(review[3]['comment']);
+            $('#reviewer').append(review[3]['author']);
             $.each(content, function(index, value) {
                 create_content(value);
             }); 
