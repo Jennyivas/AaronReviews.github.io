@@ -22,51 +22,61 @@
         $.getJSON('PageInfo.json', function(Json) {
             var colours = Json.colour['default'];
             var width;
-            
-            console.log(colours);
 
             if (screen.width <= screen.height) { width = screen.width / 8 + 'px'; } 
             else { width = screen.height / 8 + 'px'; }
             
-            document.documentElement.style.setProperty('--color0', colours[0]);
-            document.documentElement.style.setProperty('--color1', colours[1]);
-            document.documentElement.style.setProperty('--color2', colours[2]);
-            document.documentElement.style.setProperty('--color3', colours[3]);
-            document.documentElement.style.setProperty('--color4', colours[4]);
-            document.documentElement.style.setProperty('--color5', colours[5]);
-            document.documentElement.style.setProperty('--color6', colours[6]);
-            document.documentElement.style.setProperty('--color7', colours[7]);
-            document.documentElement.style.setProperty('--M', width);
-            document.documentElement.style.setProperty('--T', 1.1 + 'em');
+            $(':root').css({
+                '--color0': colours[7],
+                '--color1': colours[6],
+                '--color2': colours[5],
+                '--color3': colours[4],
+                '--color4': colours[3],
+                '--color5': colours[2],
+                '--color6': colours[1],
+                '--color7': colours[0],
+                '--M': width,
+                '--T': 1.1 + 'em'
+            })
+            
+//             document.documentElement.style.setProperty('--color0', colours[0]);
+//             document.documentElement.style.setProperty('--color1', colours[1]);
+//             document.documentElement.style.setProperty('--color2', colours[2]);
+//             document.documentElement.style.setProperty('--color3', colours[3]);
+//             document.documentElement.style.setProperty('--color4', colours[4]);
+//             document.documentElement.style.setProperty('--color5', colours[5]);
+//             document.documentElement.style.setProperty('--color6', colours[6]);
+//             document.documentElement.style.setProperty('--color7', colours[7]);
+//             document.documentElement.style.setProperty('--M', width);
+//             document.documentElement.style.setProperty('--T', 1.1 + 'em');
         });
     </script>
 </head>
 <body>
-    <header class="mobile">
-        <center>
-            <a href="index.html">
-                <img class="Mcircle2" src="icons/Home.png" style="background-color: var(--color6);" />
-            </a>
-            <a href="Exams.html">
-                <img class="Mcircle3" src="icons/Education.png" style="background-color: var(--color5);" />
-            </a>
-            <a href="About.html">
-                <img class="Mcircle4" src="icons/Profile.png" style="background-color: var(--color4);" />
-            </a>
-            <a href="http://soundcloud.com/user-650568300" target="_blank">
-                <img class="Msc" src="icons/soundcloud.png" style="background-color: var(--color2);" />
-            </a>
-            <a href="http://gb.abrsm.org/en/our-exams/#" target="_blank">
-                <img class="Mabrsm" src="icons/ABRSM.png" style="background-color: var(--color0);" />
-            </a>
-        </center>
+    <header class="mobile" align="center">
+        <a href="index.html">
+            <img class="Mcircle2" src="../imgs/icons/Home.png" style="background-color: var(--color6);" />
+        </a>
+        <a href="Exams.html">
+            <img class="Mcircle3" src="../imgs/icons/Education.png" style="background-color: var(--color5);" />
+        </a>
+        <a href="About.html">
+            <img class="Mcircle4" src="../imgs/icons/Profile.png" style="background-color: var(--color4);" />
+        </a>
+        <a href="http://soundcloud.com/user-650568300" target="_blank">
+            <img class="Msc" src="../imgs/icons/soundcloud.png" style="background-color: var(--color2);" />
+        </a>
+        <a href="http://gb.abrsm.org/en/our-exams/#" target="_blank">
+            <img class="Mabrsm" src="../imgs/icons/ABRSM.png" style="background-color: var(--color0);" />
+        </a>
     </header>
 
     <div id="boxM">
         <blockquote class="review" id="review">Jenny has helped me learn music in way that I thought I couldn't. Jenny has made me feel welcome and has always been felixible with my lessons as I work shifts. Jenny is an excellent teacher and not to mention a great pianoist herself.</blockquote>
-        <center><span class="reviewer" id="reviewer">Charlene Mighten</span></center>
+        <span class="reviewer" id="reviewer" align="center">Charlene Mighten</span>
     </div>
     <br />
+
     <div id="placeholder"></div>
     <script>
         $.getJSON('PageInfo.json', function(Json) {
