@@ -1,4 +1,4 @@
-var Id = Document.getElementsByName("PageMarker").dataset['pageid'];
+var Id = document.getElementsByName("PageMarker").dataset.pageid;
 var link_path;
 if (Id == 'Mobile') { link_path = 'PageInfo.json'; } 
 else { link_path = 'lib/PageInfo.json'; }
