@@ -1,11 +1,7 @@
-var page = document.getElementById("PageMarker");
-var Id = page.dataset['pageId'];
+var Id = document.getElementById("PageMarker").dataset['pageId'];
 var link_path;
 if (Id == 'Mobile') { link_path = 'PageInfo.json'; } 
 else { link_path = 'lib/PageInfo.json'; }
-console.log(page.dataset)
-console.log(Id);
-console.log(link_path);
 
 $.getJSON(link_path, function(Json) {
     var colours = Json.colour['default'];           
