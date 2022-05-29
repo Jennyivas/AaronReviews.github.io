@@ -1,6 +1,6 @@
 ﻿var Id = $('body').attr('id');
 var link_path = function() {
-if (Id === 'Mobile') { link_path = '../lib/PageInfo.json' } 
+if (Id === 'Mobile') { link_path = 'PageInfo.json' } 
 else { link_path = 'lib/PageInfo.json'}
 return link_path;
 };
