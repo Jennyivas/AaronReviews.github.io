@@ -9,7 +9,7 @@ function create_content(content, mobile) {
 }
 
 // Content Script
-$.getJSON(linkpath, function(Json) {
+$.getJSON(link_path, function(Json) {
     review = Json.reviews;
     content = Json.content;
 
