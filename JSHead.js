@@ -1,7 +1,8 @@
 var Id = $('body').attr('id');
 var link_path;
-if (Id === 'Mobile') { link_path = '../lib/PageInfo.json'; } 
+if (Id === 'Mobile') { link_path = 'PageInfo.json'; } 
 else { link_path = 'lib/PageInfo.json'; }
+console.log(link_path)
 
 $.getJSON(link_path, function(Json) {
     var colours = Json.colour['default'];           
