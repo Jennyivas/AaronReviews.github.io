@@ -1,12 +1,11 @@
-﻿function create_content(content) {
-    $("<div class='Mcontainer' align='center'></div>").insertBefore("#placeholder");
-    $.each(content, function (index, value) {
-        $('.Mcontainer').last().append("<p class='text'></p>");
-        $('.text').last().append(value);
-    });
-}
+﻿var Id = $('body').attr('id');
+var link_path = function() {
+if (Id === 'Mobile') { link_path = '../lib/PageInfo.json' } 
+else { link_path = 'lib/PageInfo.json'}
+return link_path;
+};
 
-$.getJSON('PageInfo.json', function(Json) {
+$.getJSON(link_path, function(Json) {
     var colours = Json.colour['default'];           
     $(':root').css({
         '--color0': colours[0],
@@ -17,11 +16,21 @@ $.getJSON('PageInfo.json', function(Json) {
         '--color5': colours[5],
         '--color6': colours[6],
         '--color7': colours[7],
-        '--T': 1 + 'em',
-        '--M': function() {
-            if (screen.width <= screen.height) { width = screen.width / 9 + 'px'; } 
-            else { width = screen.height / 9 + 'px'; }
-            return width;
-        }
+        '--font-family-titles': '"cambria", "calibri", "baskerville", serif',
+        '--font-family-sans-serif': '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
     });
+    if (Id === 'Mobile') {
+        $(':root').css({
+            '--T': 1 + 'em',
+            '--M': function() {
+                if (screen.width <= screen.height) { width = screen.width / 8 + 'px'; } 
+                else { width = screen.height / 8 + 'px'; }
+                return width;
+            }
+        });
+    } else {
+        $(':root').css({
+            '--T': 1.5 + 'em'
+        });
+    }
 });

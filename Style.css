@@ -1,7 +1,4 @@
-﻿:root {
-    --font-family-titles: "cambria", "calibri", "baskerville", serif;
-    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
+﻿:root {}
 
 html {
     position: relative;
@@ -176,13 +173,12 @@ img.Msc, img.Mabrsm, img.Mcircle1, img.Mcircle2, img.Mcircle3, img.Mcircle4, img
     margin-left: 50%;
 }
 .boxM {
-    height: 32VH;
+    /* height: 32VH;
+    border: solid 10px rgba(0,0,255,0); */
     position: relative;
-    border: solid 10px rgba(0,0,255,0);
-    background-color: rgba(255,0,255,0);
-    width: 100%;
+    width: 95%;
     vertical-align: middle;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,0.8);
 }
 input[type=text], input[type=tel], textarea {
     border: 0px solid white;
@@ -245,7 +241,7 @@ a, a:hover, a:active, a:visited {
     text-align: center;
     color: var(--color7);
 }
-#Mreview {
+.Mreview {
     font-family: var(--font-family-titles);
     font-size: 1.1em;
     text-align: center;
@@ -261,13 +257,13 @@ a, a:hover, a:active, a:visited {
     max-height: 1vh;
     background: white;
 }
-blockquote:before {
+blockquote:before, .Mreview:before {
     content: '\ \201C';
     background: rgba(0,0,0,0);
     font-size: 1.5em;
     color: var(--color7);
   }
-  blockquote:after {
+  blockquote:after, .Mreview:after {
     content: '\ \201D';
     text-align: right;
     font-size: 1.5em;
