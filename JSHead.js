@@ -1,4 +1,4 @@
-var Id = document.body.getAttribute('id');
+var Id = document.body.dataset.id;
 var link_path;
 if (Id == 'Mobile') { link_path = 'PageInfo.json'; } 
 else { link_path = 'lib/PageInfo.json'; }
