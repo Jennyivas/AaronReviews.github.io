@@ -18,7 +18,7 @@ body {
     margin-left: 3%;
     margin-right: 3%;
     position: relative;
-    padding-top: 5%;
+    padding-top: 2px;
 }
 #contactinfo, .contactinfo {
     z-index: -1;
