@@ -12,7 +12,7 @@
 
         ],
         "Exams": [
-            "<center><h2>Exams</h2></center><br />",
+            "<h3>Exams</h3><br />",
             "<p class=\"text\">For students who want to follow a graded exam system, the ABRSM offers of up to 8 graded practical exams and optional music theory exams. Please note that any practical exam submission past grade 5 must be submitted with evidence of having passed the grade 5 music theory exam</p><br />",
             "<p class=\"text\">The practical exams take 12 minutes, with tests getting longer after grade 4. The test is marked using 4 major criteria: </p><br />",
             "<li><b>performances</b> - three pieces chosen by the ABRSM <i>(90 marks)</i> </li>",
@@ -20,7 +20,7 @@
             "<li><b>sight reading</b> - <i>(21 marks)</i></li>",
             "<li><b>aural tests</b> - <i>(18 marks)</i></li><br />",
             "<p class=\"text\">Each year, there are three opportunities to enter for exams: the spring term, summer term and autumn term. <b>For a full list of exam dates and fees, <a href=http://gb.abrsm.org/en/exam-booking/exam-dates-and-fees/ target=\"_blank\">visit the ABRSM official site</a></b></p><br />",
-            "<center><h2>Music Theory Exams</h2></center><br />",
+            "<h4>Music Theory Exams</h4><br />",
             "<p class=\"text\">For musicians who wish to sit a grade 6 practical exam, they must first pass not only the grade 5 practical exam but also pass the grade 5 theory exam. Theory exams are designed to supply musicians with an understanding of the fundaments of music. You do not need to have sat music theory grades 1-4 before sitting the grade 5 theory test.</p><br />",
             "<p class=\"text\">The exam is marked out of 100 and will question students on their knowledge of key musical techniques such as harmony, melody, rhythm, dynamics and other frequently used music markings.</p><br />",
             "<p class=\"text\">You can find out more about practical music exams and music theory exams on the ABRSM official website.</p>"

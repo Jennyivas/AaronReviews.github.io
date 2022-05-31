@@ -101,61 +101,30 @@ hr {
     top:-1VH;
     width: 48%;
 }
-img.sc, img.abrsm, img.circle1, img.circle2, img.circle3, img.circle4 {
-    width: 33px;
-    height: 33px;
-    border-radius: 100px;
-    margin-right: 10px;
-    margin-top: -5px;
-    resize: unset;
-    transition: 0.15s ease-out;
-}
-img.Msc, img.Mabrsm, img.Mcircle1, img.Mcircle2, img.Mcircle3, img.Mcircle4, img.mcircle5 {
+img.Mcircle, img.circle {
+    --backdrop: black;
+    background-color: var(--backdrop);
     width: var(--M);
     height: var(--M);
     border-radius: 100px;
+    resize: unset;
+}
+img.Mcircle {
     margin-right: 4px;
     margin-left: 4px;
     margin-top: 0px;
-    resize: unset;
 }
-    img.circle1:hover {
-        -webkit-box-shadow: 0px 0px 15px 5px var(--color6);
-        -moz-box-shadow: 0px 0px 15px 5px var(--color6);
-        box-shadow: 0px 0px 15px 5px var(--color6);
-        transition: 0.2s ease-out;
-    }
-    img.circle2:hover {
-    -webkit-box-shadow: 0px 0px 15px 5px var(--color5);
-    -moz-box-shadow: 0px 0px 15px 5px var(--color5);
-    box-shadow: 0px 0px 15px 5px var(--color5);
+img.circle {
+    margin-right: 10px;
+    margin-top: -5px;
+    transition: 0.15s ease-out;
+}
+img.circle:hover {
+    -webkit-box-shadow: 0px 0px 15px 5px var(--backdrop);
+    -moz-box-shadow: 0px 0px 15px 5px var(--backdrop);
+    box-shadow: 0px 0px 15px 5px var(--backdrop);
     transition: 0.2s ease-out;
-    }
-    img.circle3:hover {
-    -webkit-box-shadow: 0px 0px 15px 5px var(--color4);
-    -moz-box-shadow: 0px 0px 15px 5px var(--color4);
-    box-shadow: 0px 0px 15px 5px var(--color4);
-    transition: 0.2s ease-out;
-    }
-    img.circle4:hover {
-    -webkit-box-shadow: 0px 0px 15px 5px var(--color3);
-    -moz-box-shadow: 0px 0px 15px 5px var(--color3);
-    box-shadow: 0px 0px 15px 5px var(--color3);
-    transition: 0.2s ease-out;
-    }
-    img.sc:hover {
-    -webkit-box-shadow: 0px 0px 15px 5px var(--color2);
-    -moz-box-shadow: 0px 0px 15px 5px var(--color2);
-    box-shadow: 0px 0px 15px 5px var(--color2);
-    transition: 0.2s ease-out;
-    }
-    img.abrsm:hover {
-    -webkit-box-shadow: 0px 0px 15px 5px var(--color0);
-    -moz-box-shadow: 0px 0px 15px 5px var(--color0);
-    box-shadow: 0px 0px 15px 5px var(--color0);
-    transition: 0.2s ease-out;
-    }
-
+}
 #box3, #box1 { /*use # when you know there will only be one instance of a class in the page - use . when you know there will be multiple instances of an element in the page*/
     height: 28VH;
     position: relative;
@@ -173,11 +142,9 @@ img.Msc, img.Mabrsm, img.Mcircle1, img.Mcircle2, img.Mcircle3, img.Mcircle4, img
     margin-left: 50%;
 }
 .boxM {
-    /* height: 32VH;
-    border: solid 10px rgba(0,0,255,0); */
     position: relative;
     width: 95%;
-    vertical-align: middle;
+    text-align: center;
     background-color: rgba(255,255,255,0.8);
 }
 input[type=text], input[type=tel], textarea {
