@@ -42,6 +42,7 @@ header {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     box-shadow: rgba(50, 50, 93, 0.2) 0px 20px 30px -12px inset, rgba(0, 0, 0, 0.2) 0px 12px 36px -18px inset, rgba(0,0,0,0.1) 0px 0px 40px 8px;
+    font-size: 1.5rem;
 }
 .mobile {
     position: sticky;
@@ -142,9 +143,9 @@ button[type=submit] {
     background: white;
     padding: 0, 10px, 0, 10px;
 }
-h1 {
+header.h1, h1 {
     color: var(--color1);
-    font-size: 3rem;
+    font-size: 2em;
     font-weight: 500;
     font-family: var(--font-family-titles);
     letter-spacing: 3px;
@@ -177,7 +178,7 @@ h5 {
 }
 h5.banner {
     color: var(--color7);
-    font-size: 1.50em;
+    font-size: 1em;
     text-decoration: none;
     font-weight: normal;
     letter-spacing: 0.5px;
