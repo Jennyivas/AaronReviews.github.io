@@ -84,12 +84,12 @@ img.Mcircle, img.circle {
     resize: unset;
 }
 img.Mcircle {
-    margin-right: 4px;
+    margin-right: 3px;
     margin-left: 4px;
     margin-top: 0px;
 }
 img.circle {
-    margin-right: 10px;
+    margin-right: 9px;
     margin-top: -5px;
     transition: 0.15s ease-out;
 }
@@ -220,7 +220,7 @@ a, a:hover, a:active, a:visited {
     text-align: center;
     color: var(--color7);
 }
-.Mreview {
+.Mreview, blockquote {
     font-family: var(--font-family-titles);
     font-size: 1.1em;
     text-align: center;
