@@ -144,7 +144,7 @@ button[type=submit] {
 }
 h1 {
     color: var(--color1);
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 500;
     font-family: var(--font-family-titles);
     letter-spacing: 3px;
