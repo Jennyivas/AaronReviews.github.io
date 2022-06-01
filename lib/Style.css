@@ -96,6 +96,9 @@ img.circle:hover {
     box-shadow: 0px 0px 15px 5px var(--backdrop);
     transition: 0.2s ease-out;
 }
+.floatcenter {
+    vertical-align: middle;
+}
 #box3, #box1 { /*use # when you know there will only be one instance of a class in the page - use . when you know there will be multiple instances of an element in the page*/
     height: 28VH;
     position: relative;
@@ -121,7 +124,7 @@ img.circle:hover {
 }
 .boxM {
     position: relative;
-    width: 95%;
+    width: 92%;
     text-align: center;
     background-color: rgba(255,255,255,0.8);
 }
