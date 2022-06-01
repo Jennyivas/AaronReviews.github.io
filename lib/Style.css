@@ -220,7 +220,7 @@ a, a:hover, a:active, a:visited {
     text-align: center;
     color: var(--color7);
 }
-.Mreview, blockquote {
+.Mreview {
     font-family: var(--font-family-titles);
     font-size: 1.1em;
     text-align: center;
