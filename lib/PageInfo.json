@@ -13,7 +13,7 @@
 
         ],
         "Exams": [
-            "<h3>Exams</h3><br />",
+            "<h4>Exams</h4><br />",
             "<p class='text'>For students who want to follow a graded exam system, the ABRSM offers of up to 8 graded practical exams and optional music theory exams. Please note that any practical exam submission past grade 5 must be submitted with evidence of having passed the grade 5 music theory exam</p><br />",
             "<p class='text'>The practical exams take 12 minutes, with tests getting longer after grade 4. The test is marked using 4 major criteria: </p><br />",
             "<li><b>performances</b> - three pieces chosen by the ABRSM <i>(90 marks)</i> </li>",
