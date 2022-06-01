@@ -125,6 +125,7 @@ img.circle:hover {
 }
 .boxM {
     position: relative;
+    margin: auto;
     width: 92%;
     text-align: center;
     background-color: rgba(255,255,255,0.8);
@@ -210,17 +211,18 @@ a, a:hover, a:active, a:visited {
     color: blue;
     text-decoration: underline;
 }
+.Mreview {
+    position: relative;
+    font-family: var(--font-family-titles);
+    font-size: 1.1em;
+    text-align: center;
+    color: var(--color7);
+}
 #review {
     font-family: var(--font-family-titles);
     font-size: 1.2em;
     margin-left: 10px;
     margin-right: 10px;
-    text-align: center;
-    color: var(--color7);
-}
-.Mreview {
-    font-family: var(--font-family-titles);
-    font-size: 1.1em;
     text-align: center;
     color: var(--color7);
 }
