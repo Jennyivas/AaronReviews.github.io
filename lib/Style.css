@@ -107,6 +107,8 @@ img.circle:hover {
 #box3 {
     width: 50%;
     vertical-align: middle;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 #box1 {
     margin-top: -28VH;
@@ -142,7 +144,7 @@ button[type=submit] {
 }
 h1 {
     color: var(--color1);
-    font-size: 400%;
+    font-size: 2em;
     font-weight: 500;
     font-family: var(--font-family-titles);
     letter-spacing: 3px;
